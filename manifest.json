@@ -1,0 +1,25 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Onetimepass Extension",
+  "description": "Extension for generating TOTP tokens",
+  "developer_name": "Jiro Sas",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "onetimepass_kw",
+      "type": "keyword",
+      "name": "generate pin",
+      "description": "keyword to activate this plugin",
+      "default_value": "one"
+    },
+    {
+      "id": "onetimepass_providers",
+      "type": "text",
+      "name": "providers",
+      "description": "Enter the key value pairs with a single space: google=123123 facebook=321321 github=121212"
+    }
+  ]
+}

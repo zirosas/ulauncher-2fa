@@ -31,7 +31,7 @@ class KeywordQueryEventListener(EventListener):
 
             secrets = provider.split("=")
             name = secrets[0]
-            secret = secrets[1] + '=' * (8 - len(secrets[1]) % 8)
+            secret = secrets[1] + '=' * ((8 - len(secrets[1])) % 8)
             token = str(otp.get_totp(secret)).zfill(6)
 
             items.append(ExtensionResultItem(icon='images/icon.png',
